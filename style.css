@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700;800&family=Playfair+Display:wght@700;800;900&display=swap');
+
+:root {
+    --aurora-deep: #0f172a;
+    --aurora-glow: rgba(79, 70, 229, 0.4);
+    --aurora-secondary: rgba(212, 175, 55, 0.2);
+    --elite-gold: #D4AF37;
+    --elite-pearl: #F8F9FA;
+    --glass-bg: rgba(255, 255, 255, 0.03);
+    --glass-border: rgba(255, 255, 255, 0.12);
+    --glass-glow: 0 32px 64px -16px rgba(0, 0, 0, 0.5);
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --nav-height: 80px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background: var(--aurora-deep);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+/* Aurora Backdrop Engine */
+.bg-decorations {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background: radial-gradient(circle at 50% 50%, #1e293b 0%, #0f172a 100%);
+}
+
+.bg-decorations::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: 
+        radial-gradient(circle at 20% 30%, var(--aurora-glow) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, var(--aurora-secondary) 0%, transparent 40%),
+        radial-gradient(circle at 40% 80%, rgba(99, 102, 241, 0.2) 0%, transparent 35%);
+    filter: blur(100px);
+    animation: aurora-shift 30s ease-in-out infinite alternate;
+}
+
+@keyframes aurora-shift {
+    0% { transform: rotate(0deg) scale(1) translate(0, 0); }
+    50% { transform: rotate(5deg) scale(1.05) translate(20px, 20px); }
+    100% { transform: rotate(-5deg) scale(1.1) translate(-20px, -20px); }
+}
+
+/* Premium Navigation */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: var(--nav-height);
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+    z-index: 1000;
+}
+
+.navbar-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-logo-img {
+    height: 50px;
+    width: 50px;
+    border-radius: 12px;
+    border: 2px solid var(--elite-gold);
+    object-fit: cover;
+}
+
+.navbar-title {
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--elite-gold) 0%, #fff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.nav-actions { display: flex; gap: 20px; }
+
+.btn-nav-elite {
+    padding: 12px 24px;
+    border-radius: 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-word {
+    background: var(--elite-gold);
+    color: var(--aurora-deep);
+}
+
+.btn-print {
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    border: 1px solid var(--glass-border);
+}
+
+.btn-nav-elite:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -12px rgba(0,0,0,0.5);
+    filter: brightness(1.1);
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 120px 0 80px;
+    position: relative;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100vw;
+    height: 100%;
+    background: url('school-bg.jpg.jpg') center/cover;
+    opacity: 0.15;
+    z-index: -1;
+    mask-image: radial-gradient(circle, black, transparent 80%);
+}
+
+.form-header {
+    animation: fadeInUp 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.school-logo {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid var(--elite-gold);
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 60px rgba(212, 175, 55, 0.3);
+    margin-bottom: 40px;
+}
+
+.header-info h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 4.5rem;
+    font-weight: 900;
+    margin-bottom: 10px;
+    letter-spacing: -2px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.school-name {
+    font-family: 'Sora', sans-serif;
+    font-size: 1.8rem;
+    color: var(--elite-gold) !important;
+    font-weight: 800;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+}
+
+/* Aurora Forms */
+.container-main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.admission-form {
+    background: var(--glass-bg);
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    border: 1px solid var(--glass-border);
+    border-radius: 48px;
+    padding: 80px;
+    margin-bottom: 100px;
+    box-shadow: var(--glass-glow);
+    position: relative;
+}
+
+.form-section {
+    margin-bottom: 100px;
+    animation: sectionReveal 1s ease-out forwards;
+}
+
+@keyframes sectionReveal {
+    from { opacity: 0; filter: blur(10px); transform: translateY(20px); }
+    to { opacity: 1; filter: blur(0); transform: translateY(0); }
+}
+
+.section-header {
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.section-header h2 {
+    font-family: 'Sora', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -1px;
+}
+
+.section-header p {
+    color: var(--elite-gold);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.form-field.full-width { grid-column: 1 / -1; }
+
+.form-field label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    padding-left: 4px;
+}
+
+.form-field input, 
+.form-field select, 
+.form-field textarea {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px 24px;
+    color: #fff;
+    font-size: 1.1rem;
+    transition: all 0.4s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+.form-field input:focus, 
+.form-field select:focus, 
+.form-field textarea:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--elite-gold);
+    box-shadow: 0 0 0 5px rgba(212, 175, 55, 0.15), 0 20px 40px -12px rgba(0,0,0,0.4);
+    transform: translateY(-2px);
+}
+
+/* Info & Note Boxes */
+.info-box {
+    background: rgba(212, 175, 55, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-left: 6px solid var(--elite-gold);
+    padding: 40px;
+    border-radius: 24px;
+    margin: 40px 0;
+}
+
+.info-box h3 {
+    font-family: 'Sora', sans-serif;
+    color: var(--elite-gold);
+    margin-bottom: 20px;
+}
+
+.notes-list li {
+    list-style: none;
+    padding-left: 30px;
+    position: relative;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.notes-list li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--elite-gold);
+}
+
+/* Elite Buttons */
+.form-buttons {
+    padding: 40px 0 120px;
+    text-align: center;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--elite-gold) 0%, #B8860B 100%);
+    color: var(--aurora-deep);
+    padding: 24px 80px;
+    font-size: 1.8rem;
+    font-family: 'Sora', sans-serif;
+    font-weight: 800;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.3);
+    transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.btn-success:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 40px 80px rgba(212, 175, 55, 0.4);
+    letter-spacing: 2px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--aurora-deep); }
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    border: 3px solid var(--aurora-deep);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--elite-gold); }
+
+@media (max-width: 900px) {
+    .container-main { padding: 0 15px; }
+    .admission-form { padding: 40px 20px; border-radius: 32px; }
+    .form-grid { grid-template-columns: 1fr; gap: 24px; }
+    .header-info h1 { font-size: 2.5rem; }
+    .section-header h2 { font-size: 1.8rem; }
+    .navbar-content { padding: 0 20px; }
+    .btn-nav-elite span { display: none; }
+}
+
+@media print {
+    .navbar, .bg-decorations, .form-buttons { display: none !important; }
+    body { background: #fff !important; color: #000; }
+    .admission-form { background: #fff; border: 1px solid #ddd; border-radius: 0; padding: 20px; box-shadow: none; }
+    .form-field input, .form-field select, .form-field textarea { border: none; border-bottom: 1px solid #000; border-radius: 0; padding: 10px 0; color: #000; }
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanskriti School - Modern Manual Admission Form (Elite Edition)</title>
+    <style>
+        @page { size: A4; margin: 12mm; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; color: #1a365d; line-height: 1.35; background: #fff; margin: 0; padding: 0; }
+        
+        .elite-border { border: 2px solid #1a365d; padding: 2px; margin: 5mm; }
+        .inner-border { border: 1px solid #d4af37; padding: 25px; position: relative; }
+        
+        /* Elite Headers */
+        .header-table { width: 100%; border-collapse: collapse; margin-bottom: 20px; border-bottom: 4px double #1a365d; padding-bottom: 15px; }
+        .logo-box { width: 110px; height: 110px; border: 3px solid #d4af37; border-radius: 50%; text-align: center; display: table-cell; vertical-align: middle; background: white; }
+        .school-info { padding-left: 25px; display: table-cell; vertical-align: middle; }
+        .school-name { font-family: 'Georgia', serif; font-size: 34pt; font-weight: 900; color: #1a365d; margin: 0; letter-spacing: -1px; text-transform: uppercase; }
+        .school-tagline { color: #d4af37; font-size: 14pt; font-style: italic; margin-top: -5px; font-weight: bold; }
+        
+        .form-identity { background: #1a365d; color: white; text-align: center; padding: 12px; font-size: 16pt; font-weight: bold; border-radius: 4px; margin: 20px 0; letter-spacing: 2px; }
+
+        /* Customer Hints & Pro-Tips */
+        .customer-tip { background: #fdf6e3; border: 1px solid #eee8d5; border-left: 10px solid #d4af37; padding: 15px; margin-bottom: 25px; border-radius: 4px; }
+        .customer-tip p { margin: 0; font-size: 10pt; color: #657b83; font-weight: 600; }
+        .customer-tip b { color: #d4af37; font-size: 11pt; }
+
+        /* Section Styling */
+        .section-box { margin-bottom: 30px; }
+        .section-header { background: #f1f5f9; padding: 10px 15px; border-left: 5px solid #1a365d; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .section-title { font-size: 13pt; font-weight: bold; color: #1a365d; text-transform: uppercase; }
+        .section-hint { font-size: 8pt; color: #d4af37; font-weight: bold; }
+
+        /* Tables & Fields */
+        table { width: 100%; border-collapse: collapse; margin-bottom: 10px; table-layout: fixed; }
+        td { padding: 12px 10px; border: 1px solid #e2e8f0; vertical-align: top; }
+        .label { font-weight: bold; background: #fafafa; font-size: 9pt; color: #475569; border-right: 1px solid #cbd5e1; width: 30%; }
+        .value { width: 70%; position: relative; }
+        .pen-line { border-bottom: 1px solid #1a365d; height: 20px; margin-top: 5px; width: 100%; display: block; }
+        .field-subtext { font-size: 7.5pt; color: #94a3b8; font-style: italic; margin-top: 3px; display: block; }
+
+        /* Checkboxes */
+        .check-item { display: inline-block; width: 14px; height: 14px; border: 1.5px solid #1a365d; margin-right: 5px; vertical-align: middle; }
+        .check-label { font-size: 9pt; vertical-align: middle; margin-right: 20px; font-weight: 500; }
+
+        /* Signature Area */
+        .sig-container { margin-top: 50px; display: table; width: 100%; }
+        .sig-box { display: table-cell; width: 50%; text-align: center; vertical-align: top; }
+        .sig-underline { border-top: 2px solid #1a365d; width: 220px; margin: 0 auto; padding-top: 5px; font-weight: bold; font-size: 11pt; }
+
+        /* Graphics */
+        .watermark { position: absolute; top: 30%; left: 10%; font-size: 80pt; color: rgba(26, 54, 93, 0.03); transform: rotate(-45deg); pointer-events: none; }
+        .corner-graphic { position: absolute; bottom: 0; right: 0; opacity: 0.1; width: 120px; height: 120px; }
+
+        .footer { text-align: center; border-top: 1px solid #e2e8f0; margin-top: 40px; padding-top: 15px; font-size: 8.5pt; color: #64748b; font-style: italic; }
+    </style>
+</head>
+<body>
+
+<div class="elite-border">
+    <div class="inner-border">
+        <div class="watermark">SANSKRITI</div>
+        
+        <!-- Header -->
+        <div class="header-table">
+            <div style="display: table-row;">
+                <div class="logo-box">LOGO HERE</div>
+                <div class="school-info">
+                    <h1 class="school-name">SANSKRITI SCHOOL</h1>
+                    <p class="school-tagline">Jabalpur (M.P.) - Empowering Minds, Shaping Futures</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-identity">ADMISSION ENROLLMENT FORM (MANUAL)</div>
+
+        <div class="customer-tip">
+            <p><b>PRO-TIP:</b> Please use <b>BLACK INK</b> and fill the form in <b>BLOCK LETTERS</b>. 
+            Ensure that the details match your legal documents (SSSMID/Aadhar) to avoid any verification discrepancies.</p>
+        </div>
+
+        <!-- Section 1: Student Details -->
+        <div class="section-box">
+            <div class="section-header">
+                <span class="section-title">01. Student Core Particulars</span>
+                <span class="section-hint">Required for Registration</span>
+            </div>
+            
+            <table>
+                <tr>
+                    <td class="label">Class into which admission is sought *</td>
+                    <td colspan="3" class="value">
+                        <span class="pen-line"></span>
+                        <span class="field-subtext">e.g., Preschool-I (Age 3-4 years as on 15 Sept 2026)</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">First Name *</td>
+                    <td class="value"><span class="pen-line"></span><span class="field-subtext">(In Block Letters)</span></td>
+                    <td class="label">Middle Name</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                </tr>
+                <tr>
+                    <td class="label">Last Name *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                    <td class="label">Gender *-</td>
+                    <td class="value">
+                        <span class="check-item"></span> <span class="check-label">Male</span>
+                        <span class="check-item"></span> <span class="check-label">Female</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Date of Birth *</td>
+                    <td class="value"><span class="pen-line"></span><span class="field-subtext">(dd-mm-yyyy)</span></td>
+                    <td class="label">Age (on 15/09/2026)</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                </tr>
+                <tr>
+                    <td class="label">DOB (in words)</td>
+                    <td colspan="3" class="value"><span class="pen-line"></span></td>
+                </tr>
+                <tr>
+                    <td class="label">Aadhar No. / SSSMID</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                    <td class="label">Blood Group *-</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                </tr>
+                <tr>
+                    <td class="label">Religion / Caste</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                    <td class="label">Category *-</td>
+                    <td class="value">
+                        <span class="check-item"></span> <span class="check-label">GEN</span>
+                        <span class="check-item"></span> <span class="check-label">SC/ST</span>
+                        <span class="check-item"></span> <span class="check-label">OBC</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 2: Parents -->
+        <div class="section-box">
+            <div class="section-header">
+                <span class="section-title">02. Parent / Guardian Information</span>
+                <span class="section-hint">Primary Contacts</span>
+            </div>
+            
+            <table>
+                <tr>
+                    <td class="label">Father's Name *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                    <td class="label">Mother's Name *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                </tr>
+                <tr>
+                    <td class="label">Education / Qual *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                    <td class="label">Education / Qual *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                </tr>
+                <tr>
+                    <td class="label">Occupation / Biz *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                    <td class="label">Occupation / Biz *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                </tr>
+                <tr>
+                    <td class="label">Mobile No. *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                    <td class="label">WhatsApp No. *</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 3: Sister/Brother Details -->
+        <div class="section-box">
+            <div class="section-header">
+                <span class="section-title">03. Sibling Studying in this School</span>
+                <span class="section-hint">Optional Details</span>
+            </div>
+            <p style="font-size: 8pt; color: #64748b; margin: -10px 0 10px 0;">(Joy Sr. Sec. / Wings Of Joy School, Jabalpur)</p>
+            <table>
+                <tr>
+                    <td class="label">Child's Name</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                    <td class="label">Adm No / Class</td>
+                    <td class="value"><span class="pen-line"></span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Section 4: Documents -->
+        <div class="section-box">
+            <div class="section-header">
+                <span class="section-title">04. Mandatory Attachments</span>
+                <span class="section-hint">Checklist</span>
+            </div>
+            <div style="padding: 10px; background: #fffbeb; border: 1px dashed #d4af37; border-radius: 4px;">
+                <div style="margin-bottom: 5px;"><span class="check-item"></span> <span class="check-label">Birth Certificate of the child</span></div>
+                <div style="margin-bottom: 5px;"><span class="check-item"></span> <span class="check-label">Caste Certificate (For ST / SC / OBC)</span></div>
+                <div><span class="check-item"></span> <span class="check-label">AADHAAR Card of Child</span></div>
+            </div>
+        </div>
+
+        <!-- Declaration -->
+        <p style="font-size: 9pt; text-align: center; margin: 30px 0; font-weight: bold; color: #1a365d;">
+            "I hereby certify that the information provided is correct to the best of my knowledge."
+        </p>
+
+        <div class="sig-container">
+            <div class="sig-box">
+                <div class="sig-underline">Father's Signature</div>
+                <span class="field-subtext">Date: ____/____/2026</span>
+            </div>
+            <div class="sig-box">
+                <div class="sig-underline">Mother's Signature</div>
+                <span class="field-subtext">Date: ____/____/2026</span>
+            </div>
+        </div>
+
+        <div class="footer">
+            Design Version: Elite Manual 3.0 | Modern Print Optimized for Microsoft Word | &copy; Sanskriti School Administration
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
